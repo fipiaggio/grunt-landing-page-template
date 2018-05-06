@@ -11,8 +11,18 @@ module.exports = function(grunt) {
         },
         copy: {
             main: {
-                src: 'src/index.html',
-                dest: 'build/index.html',
+                files:[
+                    {
+                        src: 'src/index.html',
+                        dest: 'build/index.html' 
+                    },
+                    {
+                        expand: false, 
+                        src: ['src/fonts/**'], 
+                        flatten: true,
+                        dest: 'build/'
+                    }
+                ]
             }
         },
         uglify: {
