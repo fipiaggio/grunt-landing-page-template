@@ -17,10 +17,10 @@ module.exports = function(grunt) {
                         dest: 'build/index.html' 
                     },
                     {
-                        expand: false, 
-                        src: ['src/fonts/**'], 
-                        flatten: true,
-                        dest: 'build/'
+                        expand: true, 
+                        cwd:'src/fonts/',
+                        src: '**', 
+                        dest: 'build/fonts'
                     }
                 ]
             }
